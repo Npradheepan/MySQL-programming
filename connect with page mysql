@@ -1,0 +1,52 @@
+file =login
+<?php
+$con = new mysqli('localhost','root','','login');
+if($con->connect_errno)
+{
+    echo $con->connect_error;
+    dei();
+}
+else
+{
+   echo "Database Connected"; 
+}
+?>
+file= index.php
+
+<?php
+$con = new mysqli('localhost','root','','login');
+if($con->connect_errno)
+{
+    echo $con->connect_error;
+    dei();
+}
+else
+{
+   echo "Database Connected"; 
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login-page</title>
+</head>
+<body>
+    <div id="frm">
+    <form action="login.php" method="POST"></form>
+    <span> 
+    <label for="name">UserName</label>
+    <input type="text" id="name" name="name">
+    </span>
+    <span> 
+    <label for="password">UserName</label>
+    <input type="text" id="pass" name="passWord">
+    </span>
+    <input id="btn" type="supmit" value="submit">
+    </div>
+</body>
+</html>
